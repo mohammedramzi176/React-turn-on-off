@@ -1,6 +1,12 @@
-import React, {useState} from 'react'
+import React, {useState,useEffect} from 'react'
 
 function Counter() {
+    useEffect(()=>{
+        console.log("Mounting...");
+        return()=>{
+          console.log("Unmounting...");
+        }
+      })
     const [count,setCount]=useState(0)
     return (
         <div>
